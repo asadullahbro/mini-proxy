@@ -4,7 +4,7 @@ import { createProxyMiddleware } from "http-proxy-middleware";
 const app = express();
 
 app.use("/", createProxyMiddleware({
-  target: "https://www.instagram.com",
+  target: "https://www.instagram.com", // Target Website to scrap.
   changeOrigin: true,
   onProxyReq: (proxyReq, req) => {
     // optional: pretend to be a browser
